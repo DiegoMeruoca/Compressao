@@ -1,0 +1,1 @@
+estou             usando  um    algoritimo      de      compressao     de       espacos  em    branco
