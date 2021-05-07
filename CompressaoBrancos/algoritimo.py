@@ -1,4 +1,8 @@
 # Ler o arquivo o riginal
+import os
+import time
+
+
 def ler():
     arquivo = open("original.txt", "r")  # Abre o arquivo original.txt
     # Utilizando o modo R ele lê o arquivo que já foi criado, se não existir dá erro.
@@ -7,6 +11,7 @@ def ler():
         print(linha)  # Printa a linha obtida no arquivo
     arquivo.close()  # O método close fecha o arquivo
     print("=" * 100)
+    time.sleep(4)
 
 
 def comprimir():
@@ -40,6 +45,7 @@ def comprimir():
     comprimido = open("comprimido.txt", "w")  # Usando W cria o arquivo, se já existir reescreve.
     comprimido.write(string_comprimido)
     comprimido.close()
+    time.sleep(4)
 
 
 def descomprimir():
@@ -48,6 +54,7 @@ def descomprimir():
     lista_descomprimido = []
     # Carrega os dados do arquivo para uma lista
     for linha in arquivo.readlines():
+
         for char in linha:
             lista_caracteres.append(char)
     cont = 1
@@ -79,15 +86,17 @@ def descomprimir():
     descomprimido = open("descomprimido.txt", "w")  # Usando W cria o arquivo, se já existir reescreve.
     descomprimido.write(string_descomprimido)
     descomprimido.close()
+    time.sleep(4)
 
 
 while True:
+    print("\n"*10)
     print("=" * 100)
     print("Bem vindo ao algoritimo de supressão de espaçoes em branco!\nO que deseja fazer:")
     print("=" * 100)
     print("1-Ler o conteudo do arquivo original")
     print("2-Comprimir arquivo original")
-    print("3-Descomprimir o arquivo comprimido (Nescessário fazer o passo 2 primeiro...)")
+    print("3-Descomprimir o arquivo comprimido")
     print("4-Sair do programa")
     op = input("Digite o número da opção:")
     if op == "1":
@@ -95,9 +104,15 @@ while True:
     elif op == "2":
         comprimir()
     elif op == "3":
-        descomprimir()
+        if os.path.isfile("comprimido.txt"):
+            descomprimir()
+        else:
+            print("Primeiro você precisa ter um arquivo comprimido,execute o passo 2")
+            time.sleep(4)
     elif op == "4":
         print("Saindo...")
+        time.sleep(4)
         break
     else:
         print("Opção inválida!")
+        time.sleep(4)
