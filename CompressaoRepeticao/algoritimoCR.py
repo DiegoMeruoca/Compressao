@@ -97,7 +97,7 @@ def descomprimir():
 while True:
     print("\n"*10)
     print("=" * 100)
-    print("Bem vindo ao algoritimo de supressão de espaçoes em branco!\nO que deseja fazer:")
+    print("Bem vindo ao algoritimo de supressão de caracteres repetidos!\nO que deseja fazer:")
     print("=" * 100)
     print("1-Ler o conteudo do arquivo original")
     print("2-Comprimir arquivo original")
