@@ -1,4 +1,4 @@
-# Ler o arquivo o riginal
+# Compressão de caracteres repetidos
 import os
 import time
 

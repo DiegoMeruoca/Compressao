@@ -1,4 +1,4 @@
-# Ler o arquivo o riginal
+# Compressão de espaçoes em branco
 import os
 import time
 
