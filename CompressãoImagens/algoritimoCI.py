@@ -1,4 +1,8 @@
 # Compressão de imagens
+# Bibliografia:
+# https://docs.python.org/pt-br/3/library/archiving.html
+# https://code.tutsplus.com/pt/tutorials/compressing-and-extracting-files-in-python--cms-26816
+
 import os
 import time
 import zipfile
